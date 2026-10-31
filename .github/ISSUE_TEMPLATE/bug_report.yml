@@ -1,0 +1,62 @@
+name: Reportar un error
+description: Algo no funciona como debería
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por tomarte el tiempo de reportar. Cuanta más información des,
+        más rápido se puede corregir.
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: ¿Qué pasó?
+      description: Describe el problema en una o dos frases.
+      placeholder: Al registrar una entrada, la celda no cambia a ocupada.
+    validations:
+      required: true
+
+  - type: textarea
+    id: esperado
+    attributes:
+      label: ¿Qué esperabas que pasara?
+      placeholder: La celda debía quedar marcada como ocupada.
+    validations:
+      required: true
+
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducirlo
+      placeholder: |
+        1. Iniciar sesión como vigilante
+        2. Ir a "Registrar entrada"
+        3. Ingresar la placa ABC123
+        4. Ver el estado de la celda
+    validations:
+      required: true
+
+  - type: input
+    id: entorno
+    attributes:
+      label: Entorno
+      description: Sistema operativo, navegador o versión de Flutter.
+      placeholder: Windows 11 · Flutter 3.24 · Chrome 130
+
+  - type: textarea
+    id: capturas
+    attributes:
+      label: Capturas o registros
+      description: Arrastra imágenes o pega el mensaje de error.
+
+  - type: checkboxes
+    id: confirmaciones
+    attributes:
+      label: Antes de enviar
+      options:
+        - label: Revisé que no exista un issue igual.
+          required: true
+        - label: Probé con la última versión del proyecto.
+          required: true

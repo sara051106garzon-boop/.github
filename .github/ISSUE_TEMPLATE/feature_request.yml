@@ -1,0 +1,54 @@
+name: Proponer una mejora
+description: Una idea para mejorar el proyecto
+title: "[Mejora]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Las ideas son bienvenidas. Explica el problema antes de la solución:
+        así se puede discutir el enfoque.
+
+  - type: textarea
+    id: problema
+    attributes:
+      label: ¿Qué problema resuelve?
+      placeholder: Hoy no se puede consultar el historial por rango de fechas.
+    validations:
+      required: true
+
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: ¿Cómo lo imaginas?
+      placeholder: Agregar los parámetros desde y hasta al endpoint de historial.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas que consideraste
+      description: Opcional.
+
+  - type: dropdown
+    id: modulo
+    attributes:
+      label: Módulo afectado
+      options:
+        - Back-end (API)
+        - App móvil (Flutter)
+        - Base de datos
+        - Pruebas
+        - Documentación
+        - Otro
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmaciones
+    attributes:
+      label: Antes de enviar
+      options:
+        - label: Revisé que no exista una propuesta igual.
+          required: true
